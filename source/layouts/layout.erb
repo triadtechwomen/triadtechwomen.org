@@ -14,6 +14,16 @@
   </head>
 
   <body class="<%= page_classes %>">
+
+    <nav id="desktop">
+      <%= partial "partials/nav_desktop" %>
+    </nav>
+
     <%= yield %>
+
+    <footer>
+      <%= partial "partials/footer" %>
+    </footer>
+    
   </body>
 </html>
