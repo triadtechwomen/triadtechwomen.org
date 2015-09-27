@@ -3,27 +3,41 @@
   <head>
     <meta charset="utf-8">
 
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- typekit -->
+    <script src="https://use.typekit.net/xmz8vun.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- pull in Font Awesome CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
 
     <%= stylesheet_link_tag "normalize", "all" %>
     <%= javascript_include_tag  "all" %>
+
+    <meta name="viewport" content="initial-scale=1">
   </head>
 
   <body class="<%= page_classes %>">
 
-    <nav id="desktop">
-      <%= partial "partials/nav_desktop" %>
-    </nav>
+    <div class="status-bar">
+      <h4>Triad Tech Women</h4>
+    </div>
+    <header class="internal">
 
-    <%= yield %>
-
-    <footer>
-      <%= partial "partials/footer" %>
-    </footer>
+    </header>
+    <div class="menu-fade-screen"></div>
     
+<%= yield %>
+
+<%= partial "partials/footer" %>
+
   </body>
 </html>
