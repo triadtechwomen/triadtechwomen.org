@@ -34,30 +34,19 @@ button {
 
 .button {
   width: modular-scale(9);
-  margin: $base-spacing*2 auto 0 auto;
+  margin: $base-spacing/2 auto 0 auto;
   display: block;
   clear: both;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.06rem;
-  padding: $small-spacing $small-spacing*2;
+  padding: $small-spacing;
   border-radius: 8px;
   font-weight: bolder;
   @include transition(all 0.30s ease-in-out);
-
-
-
-  &.teal {
-    background: $teal;
-    color: $almost-white;
-    border-bottom: 3px solid darken($teal, 20%);
-  }
-
-  &.light-purple {
-    background: $light-purple;
-    color: $almost-white;
-    border-bottom: 3px solid darken($light-purple, 20%);
-  }
+  background: darken($light-purple, 5%);
+  color: $almost-white;
+  border-bottom: 2px solid darken($light-purple, 20%);
 
   &.spaced {
     margin-top: $base-spacing;
